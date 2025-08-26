@@ -1,114 +1,117 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Menu Mobile
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+// Menu mobile
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-    // Fechar menu ao clicar em um link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// Filtro do portfólio
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove a classe active de todos os botões
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Adiciona a classe active ao botão clicado
+        button.classList.add('active');
+        
+        // Obtém o filtro
+        const filter = button.getAttribute('data-filter');
+        
+        // Filtra os itens do portfólio
+        portfolioItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
         });
     });
+});
 
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        header.classList.toggle('scrolled', window.scrollY > 100);
+// Botão voltar ao topo
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('active');
+    } else {
+        backToTopButton.classList.remove('active');
+    }
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Formulário de contato
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Aqui você pode adicionar a lógica para enviar o formulário
+    // Por exemplo, usando EmailJS, Fetch API, etc.
+    
+    // Simulação de envio bem-sucedido
+    alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+    contactForm.reset();
+});
+
+// Animação das barras de habilidades quando a seção é visualizada
+const aboutSection = document.getElementById('about');
+const skillBars = document.querySelectorAll('.skill-progress span');
+
+function animateSkillBars() {
+    skillBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
         
-        // Botão voltar ao topo
-        const backToTop = document.querySelector('.back-to-top');
-        if (window.scrollY > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 200);
+    });
+}
+
+// Observador de interseção para animar as barras de habilidades
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateSkillBars();
+            observer.unobserve(entry.target);
         }
     });
+}, { threshold: 0.5 });
 
-    // Smooth scrolling para links de âncora
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+observer.observe(aboutSection);
 
-    // Filtragem de portfólio
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+// Efeito de digitação no título
+const heroTitle = document.querySelector('.hero-text h1');
+const originalText = heroTitle.textContent;
+let charIndex = 0;
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remover classe ativa de todos os botões
-            filterBtns.forEach(btn => btn.classList.remove('active'));
-            
-            // Adicionar classe ativa ao botão clicado
-            btn.classList.add('active');
-            
-            const filter = btn.getAttribute('data-filter');
-            
-            portfolioItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
-
-    // Envio de formulário
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simular envio do formulário
-            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            contactForm.reset();
-        });
+function typeEffect() {
+    if (charIndex < originalText.length) {
+        heroTitle.textContent = originalText.substring(0, charIndex + 1);
+        charIndex++;
+        setTimeout(typeEffect, 100);
     }
+}
 
-    // Animação nas barras de habilidades
-    const skillBars = document.querySelectorAll('.skill-bar');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBar = entry.target.querySelector('.skill-progress span');
-                const width = progressBar.style.width;
-                progressBar.style.width = '0';
-                setTimeout(() => {
-                    progressBar.style.width = width;
-                }, 300);
-                entry.target.classList.add('animate');
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    skillBars.forEach(bar => {
-        observer.observe(bar);
-    });
-
-    // Botão voltar ao topo
-    document.querySelector('.back-to-top').addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+// Inicia o efeito de digitação quando a página carrega
+window.addEventListener('load', () => {
+    heroTitle.textContent = '';
+    setTimeout(typeEffect, 500);
 });
