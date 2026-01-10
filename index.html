@@ -3,127 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Freire | Portfólio Profissional</title>
+    <title>David Francisco Freire | Analista de Dados & UI/UX Designer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <!-- Header e Navegação -->
+    <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">David<span>Freire</span></a>
-            <ul class="nav-menu">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-            <div class="hamburger">
+            <a href="#home" class="logo">David<span>Freire</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#education">Educação</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact" class="btn-contact">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section com Foto de Perfil -->
-    <section id="hero">
+    <!-- Seção Hero/Home -->
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>David Francisco Freire</h1>
-                    <h2>UI/UX Design | Analista de Dados & Desenvolvedor</h2>
-                    <p>Profissional multidisciplinar com mais de 12 anos de experiência em operações, logística, transporte, análises administrativas e Designer Gráfico UI/UX. Conhecimento em automação de rotinas, visualização de dados e Criatividade.</p>
-                    <div class="hero-btns">
-                        <a href="#portfolio" class="btn">Ver Portfólio</a>
-                        <a href="#contact" class="btn btn-outline">Contato</a>
+                <div class="hero-text animate__animated animate__fadeInLeft">
+                    <h1 class="hero-title">David Francisco <span class="highlight">Freire</span></h1>
+                    <h2 class="hero-subtitle">Analista de Dados & Operações | UI/UX Designer</h2>
+                    <p class="hero-description">
+                        Profissional multidisciplinar com 12+ anos em operações, logística e análise de dados, 
+                        com transição estratégica para Design Gráfico, UI/UX e Gamification.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://api.whatsapp.com/send?phone=5544999387903" target="_blank" class="btn-primary">
+                            <i class="fab fa-whatsapp"></i> Contato WhatsApp
+                        </a>
+                        <a href="#resume" class="btn-secondary">Ver Currículo Completo</a>
+                    </div>
+                    
+                    <div class="hero-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>freiredavid537@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(18) 9 8805-8657 | (44) 9 9938-7903</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-img">
-                    <div class="profile-frame">
-                        <img src="david.jpeg" alt="David Freire">
+                
+                <div class="hero-image animate__animated animate__fadeInRight">
+                    <div class="profile-image-container">
+                        <img src="david.png" alt="David Francisco Freire" class="profile-image" id="profileImage">
+                        <div class="image-frame"></div>
+                        <div class="tech-icons">
+                            <i class="fab fa-python"></i>
+                            <i class="fas fa-chart-bar"></i>
+                            <i class="fab fa-figma"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="quick-links">
+                <a href="https://github.com/davidfreiretec" target="_blank" class="quick-link">
+                    <i class="fab fa-github"></i>
+                    <span>Portfólio Dev</span>
+                </a>
+                <a href="https://dvmktagency.my.canva.site/davidevitoriamkt" target="_blank" class="quick-link">
+                    <i class="fas fa-palette"></i>
+                    <span>Portfólio Design</span>
+                </a>
+                <a href="https://www.notion.so/Curriculo-David-Francisco-Freire-193359b9f03580929b04f18d3901aa53" target="_blank" class="quick-link">
+                    <i class="fas fa-globe"></i>
+                    <span>Currículo Online</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="about">
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+            <div class="section-title">
+                <h2>Sobre Mim</h2>
+                <p>Conheça minha trajetória profissional</p>
+            </div>
+            
             <div class="about-content">
                 <div class="about-text">
-                    <p>Profissional multidisciplinar com mais de 12 anos de experiência em operações, logística, transporte e análises administrativas. Graduado em Análise e Desenvolvimento de Sistemas, MBA em Data Science aplicada à Gestão da Tecnologia da Informação, cursando Pós Graduação em Designer Gráfico UI/UX e Gamificantion.</p>
-                    <p>Minha atuação é focada em automação de rotinas, análise de dados operacionais e visualização com Power BI e Excel. Possuo uma visão prática do chão de fábrica aliada ao domínio de ferramentas digitais para otimização de processos.</p>
-                    <p>Combinando experiência prática e conhecimento técnico, busco transformar dados em insights acionáveis que impulsionem a eficiência operacional e a tomada de decisão estratégica.</p>
+                    <p class="about-description">
+                        Profissional multidisciplinar com mais de 12 anos de experiência em operações, logística,
+                        transporte e análise de dados, com transição estratégica para Design Gráfico, UI/UX e
+                        Gamification.
+                    </p>
+                    <p>
+                        Especializado em automação de processos, análise de dados e criação visual,
+                        utilizando ferramentas como Power BI, Excel, Python, Figma, Illustrator e Canva. Combino
+                        visão prática de operações com expertise técnica para otimizar performance e engajamento
+                        em projetos digitais e analíticos.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-text">Anos de Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-text">+ Projetos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-text">Especializações</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-skills">
-                    <h3>Minhas Habilidades</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Power BI</span>
-                                <span>60%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 60%;"></span>
-                            </div>
+                
+                <div class="about-image">
+                    <div class="floating-elements">
+                        <div class="floating-element el1">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Análise de Dados</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Excel Avançado</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 70%;"></span>
-                            </div>
+                        <div class="floating-element el2">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>UI/UX Design</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>SQL</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 50%;"></span>
-                            </div>
+                        <div class="floating-element el3">
+                            <i class="fas fa-robot"></i>
+                            <span>Automação</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 50%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Desenvolvimento Web</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 65%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Figma</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 65%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>Adobe Creative Cloud</span>
-                                <span>55%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <span style="width: 55%;"></span>
-                            </div>
+                        <div class="floating-element el4">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Gamification</span>
                         </div>
                     </div>
                 </div>
@@ -131,222 +158,299 @@
         </div>
     </section>
 
-    <!-- Habilidades -->
-    <section id="skills">
+    <!-- Seção Convite para Currículo -->
+    <section id="resume" class="resume-invite">
         <div class="container">
-            <h2 class="section-title">Habilidades e Ferramentas</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
+            <div class="section-title">
+                <h2>Currículo Completo Online</h2>
+                <p>Para conhecer minha trajetória profissional detalhada</p>
+            </div>
+            
+            <div class="resume-content">
+                <div class="resume-text">
+                    <h3>Minha experiência profissional completa está disponível em um currículo interativo</h3>
+                    <p>
+                        Visite meu currículo online para explorar minha trajetória de mais de 12 anos em operações, 
+                        logística, análise de dados e design. Lá você encontrará:
+                    </p>
+                    
+                    <ul class="resume-features">
+                        <li><i class="fas fa-check-circle"></i> Histórico profissional detalhado</li>
+                        <li><i class="fas fa-check-circle"></i> Experiências em diferentes setores</li>
+                        <li><i class="fas fa-check-circle"></i> Conquistas e resultados alcançados</li>
+                        <li><i class="fas fa-check-circle"></i> Certificações e especializações</li>
+                        <li><i class="fas fa-check-circle"></i> Projetos realizados</li>
+                        <li><i class="fas fa-check-circle"></i> Referências e recomendações</li>
+                    </ul>
+                    
+                    <div class="resume-cta">
+                        <a href="https://www.notion.so/Curriculo-David-Francisco-Freire-193359b9f03580929b04f18d3901aa53" target="_blank" class="btn-primary btn-large">
+                            <i class="fas fa-external-link-alt"></i> Acessar Currículo Completo
+                        </a>
+                        <p class="resume-note">(Abre em uma nova aba)</p>
                     </div>
-                    <h3>Análise de Dados</h3>
-                    <p>Visualização de dados com Power BI, KPIs, dashboards e Power Query para tomada de decisão estratégica.</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-file-excel"></i>
+                
+                <div class="resume-image">
+                    <div class="resume-preview">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Currículo Interativo</h4>
+                        <p>Versão online com navegação intuitiva</p>
+                        <div class="preview-animation">
+                            <i class="fas fa-mouse-pointer animate-pulse"></i>
+                            <span>Clique para explorar</span>
+                        </div>
                     </div>
-                    <h3>Excel Avançado</h3>
-                    <p>PROCX, ÍNDICE/CORRESP, tabelas dinâmicas, macros e automação de relatórios complexos.</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Educação -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Educação & Certificações</h2>
+                <p>Formação acadêmica e especializações</p>
+            </div>
+            
+            <div class="education-cards">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>SQL & Bancos de Dados</h3>
-                    <p>SELECT, JOINs, integração com ERPs, modelagem e otimização de consultas.</p>
+                    <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                    <p class="edu-period">2022–2025</p>
+                    <p class="edu-institution">Faculdade Facint</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
+                
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Python</h3>
-                    <p>Scripts de organização, automação, ETL e minissistemas para padronização de dados.</p>
+                    <h3>MBA em Data Science e Gestão de TI</h3>
+                    <p class="edu-period">2025</p>
+                    <p class="edu-institution">Faculdade Facint</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Criação de interfaces responsivas e funcionais utilizando HTML, CSS e JavaScript.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-figma"></i>
-                    </div>
-                    <h3>Figma</h3>
-                    <p>Design de interfaces, prototipagem e criação de experiências de usuário intuitivas.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
+                
+                <div class="edu-card">
+                    <div class="edu-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
-                    <h3>Adobe Creative Cloud</h3>
-                    <p>Criação de elementos visuais, edição de imagens e design gráfico para diversos propósitos.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Automação</h3>
-                    <p>Power Automate, automação de processos e fluxos de trabalho para eficiência operacional.</p>
+                    <h3>MBA em Design Gráfico, UI/UX e Gamification</h3>
+                    <p class="edu-period">2025 até 2026</p>
+                    <p class="edu-institution">Faculdade Facint</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experiência -->
-    <section id="experience">
+    <!-- Seção Habilidades -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Abr/2025 - Atual</div>
-                    <div class="timeline-content">
-                        <h3>AGROTERENAS</h3>
-                        <h4>Assistente COA</h4>
-                        <p>Monitoramento de operações agrícolas via telemetria, análise de desempenho e suporte aos operadores.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2024<br>2018 - 2019</div>
-                    <div class="timeline-content">
-                        <h3>COCAMAR</h3>
-                        <h4>Analista de Operações e Faturista</h4>
-                        <p>Otimização logística, emissão de CTe/MDFe, gestão de ICMS e KPIs operacionais.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>UNIDAS</h3>
-                        <h4>Assistente de Frota</h4>
-                        <p>Gestão de abastecimento, manutenção e relatórios de performance da frota.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2009 - 2018</div>
-                    <div class="timeline-content">
-                        <h3>ATVOS</h3>
-                        <h4>Assistente Administrativo Agrícola</h4>
-                        <p>Controle de rendimento, notas fiscais, planilhas de horas e produtividade.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - Atual</div>
-                    <div class="timeline-content">
-                        <h3>Freelancer</h3>
-                        <h4>Designer Gráfico / UI-UX</h4>
-                        <p>Identidade visual, dashboards e apresentações digitais para empresas e projetos pessoais.</p>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2>Habilidades & Competências</h2>
+                <p>Minhas áreas de especialização</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfólio -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Meu Portfólio</h2>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
-                <button class="filter-btn" data-filter="automation">Automação</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="dashboard">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dashboard Logístico" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Dashboard Logístico</h3>
-                        <p>Power BI com dados de transporte e indicadores de desempenho</p>
-                        <a href="#" class="btn">Ver Detalhes</a>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Designer & Criação</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">UI/UX Design</span>
+                        <span class="skill-item">Design Gráfico</span>
+                        <span class="skill-item">Gamification</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">Illustrator</span>
+                        <span class="skill-item">Canva</span>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="automation">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sistema Python" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Sistema ETL Python</h3>
-                        <p>Minissistema para extração, transformação e carregamento de dados operacionais</p>
-                        <a href="#" class="btn">Ver Detalhes</a>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Análise de Dados</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Excel Avançado</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">ETL</span>
+                        <span class="skill-item">Dashboards</span>
+                        <span class="skill-item">KPIs</span>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="design">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="UI/UX Design" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Design de Interface</h3>
-                        <p>Projeto de UI/UX para aplicativo de gestão logística</p>
-                        <a href="#" class="btn">Ver Detalhes</a>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Automação & Desenvolvimento</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Automação de Processos</span>
+                        <span class="skill-item">Python (Tkinter)</span>
+                        <span class="skill-item">Desenvolvimento Web</span>
+                        <span class="skill-item">Sistemas</span>
+                        <span class="skill-item">Scripts</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Outras Competências</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Documentos Fiscais</span>
+                        <span class="skill-item">Resolução de Problemas</span>
+                        <span class="skill-item">Inteligência Emocional</span>
+                        <span class="skill-item">Gestão de Projetos</span>
+                        <span class="skill-item">Logística</span>
+                        <span class="skill-item">Operações</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contact">
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-container">
+            <div class="section-title">
+                <h2>Projetos & Destaques</h2>
+                <p>Alguns dos meus trabalhos recentes</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Sistemas Python (Tkinter)</h3>
+                    <p>Desenvolvimento de minissistemas em Python para ETL e padronização de dados.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Dashboards Power BI</h3>
+                    <p>Criação de dashboards no Power BI focados em operações e performance.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Sites Institucionais</h3>
+                    <p>Desenvolvimento de sites institucionais e personalizados.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gamificação</h3>
+                    <p>Implementação de gamificação em interfaces e relatórios interativos.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Projetos Gráficos</h3>
+                    <p>Criação de camisetas, banners, cartões de visita e logotipos.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Dashboards Interativos</h3>
+                    <p>Criação de dashboards interativos com foco em UX e engajamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Vamos conversar sobre oportunidades</p>
+            </div>
+            
+            <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <h3>Informações de Contato</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(18) 9 8805-8657 | (44) 9 9938-7903</p>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h3>Localização</h3>
-                            <p>Maracaí - SP, Brasil</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Telefone</h3>
-                            <p>(18) 9 8805-8657</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                        
+                        <div class="contact-detail">
                             <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>freiredavid537@gmail.com</p>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>freiredavid537@gmail.com</p>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Disponível para trabalho remoto ou presencial</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/davidfreiretec" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://dvmktagency.my.canva.site/davidevitoriamkt" target="_blank" class="social-link">
+                            <i class="fab fa-canva"></i>
+                        </a>
+                        <a href="https://www.notion.so/Curriculo-David-Francisco-Freire-193359b9f03580929b04f18d3901aa53" target="_blank" class="social-link">
                             <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Portfólio</h3>
-                            <p>linktr.ee/davidrock182</p>
-                        </div>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5544999387903" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" class="form-control" required>
+                
+                <div class="contact-actions">
+                    <h3>Acesse Meus Portfólios</h3>
+                    
+                    <a href="https://github.com/davidfreiretec" target="_blank" class="action-btn">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>Portfólio Desenvolvedor</h4>
+                            <p>GitHub com projetos de desenvolvimento</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="https://dvmktagency.my.canva.site/davidevitoriamkt" target="_blank" class="action-btn">
+                        <i class="fas fa-palette"></i>
+                        <div>
+                            <h4>Portfólio Designer</h4>
+                            <p>Projetos de design e UI/UX</p>
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" class="form-control" required>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="https://www.notion.so/Curriculo-David-Francisco-Freire-193359b9f03580929b04f18d3901aa53" target="_blank" class="action-btn">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Currículo Online</h4>
+                            <p>Versão completa da minha trajetória</p>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="https://api.whatsapp.com/send?phone=5544999387903" target="_blank" class="btn-primary btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contato via WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -356,58 +460,40 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h3>David Freire</h3>
-                    <p>Profissional multidisciplinar com expertise em análise de dados, automação e visualização de informações para otimização de processos operacionais.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/david-ffreire-54760028b" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://linktr.ee/davidrock182" class="social-link" target="_blank">
-                            <i class="fas fa-link"></i>
-                        </a>
-                        <a href="mailto:freiredavid537@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+                <div class="footer-logo">
+                    <a href="#home" class="logo">David<span>Freire</span></a>
+                    <p>Analista de Dados & Operações | UI/UX Designer</p>
                 </div>
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#hero">Início</a></li>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
                         <li><a href="#about">Sobre</a></li>
+                        <li><a href="#resume">Currículo</a></li>
                         <li><a href="#skills">Habilidades</a></li>
-                        <li><a href="#experience">Experiência</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#projects">Projetos</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Áreas de Especialização</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Análise de Dados</a></li>
-                        <li><a href="#">Automação de Processos</a></li>
-                        <li><a href="#">Visualização com Power BI</a></li>
-                        <li><a href="#">Desenvolvimento Python</a></li>
-                        <li><a href="#">Otimização Logística</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                    </ul>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> freiredavid537@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> (44) 9 9938-7903</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 David Francisco Freire. Todos os direitos reservados.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> David Francisco Freire. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para recrutadores</p>
             </div>
         </div>
     </footer>
 
     <!-- Botão Voltar ao Topo -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
